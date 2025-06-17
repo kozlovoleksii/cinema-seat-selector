@@ -1,0 +1,58 @@
+
+.selected-panel {
+  background: #2e2e2e;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 260px;
+  flex-shrink: 0;
+}
+
+.selected-seat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  gap: 1rem;
+}
+.selected-seat-price {
+  margin-left: auto;
+}
+
+
+.selected-seat button {
+  background: none;
+  color: red;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.selected-total {
+  border-top: 1px solid #555;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.selected-total-count {
+  margin-bottom: 10px;
+}
+
+.selected-total-price {
+  margin-bottom: 20px;
+}
+
+.selected-panel-temp-text {
+  text-align: center;
+}
+
+.selected-panel__submit {
+  width: 100%;
+  background: #ffc107;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

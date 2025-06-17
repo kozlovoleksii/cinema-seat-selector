@@ -1,0 +1,272 @@
+.seats-page {
+  padding: 2rem;
+  color: #fff;
+  min-height: 100vh;
+  background: #111;
+}
+
+.seats-page__title {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  margin-left: 32%;
+}
+
+.screen-display {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto 2rem;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  background: linear-gradient(to bottom, #555, #333);
+  color: #ddd;
+  font-weight: bold;
+}
+
+.seats-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.seats-area-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.seats-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+}
+
+.seats-rows {
+  display: grid;
+  grid-template-rows: repeat(6, 40px);
+  gap: 10px;
+  margin: 0 1rem;
+}
+
+.row-number {
+  color: #ccc;
+  font-size: 0.9rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-number:last-child {
+  margin-top: 1.2rem;
+}
+
+.seats-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.seats-page__seats-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.seat:hover {
+  border: 1px solid orange;
+  background-color: white;
+}
+
+.seat--available {
+  background-color: #ccc;
+}
+
+.seat--available:hover {
+  color: black;
+}
+
+.seat--available-vip {
+  background-color: #007bff;
+}
+.seat--vip:hover {
+  border: 1px solid orange;
+  background-color: #49a1f9;
+  color: white;
+}
+
+.seat--vip {
+  background-color: #007bff;
+  position: relative;
+  margin-top: 1.2rem;
+}
+
+.seat--taken {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.seat--selected {
+  background-color: #ffc107;
+}
+
+.seat.selected:hover {
+  background-color: #ffc107;
+  border: none;
+  color: inherit;
+}
+
+.seats-page__legend {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.seat.selected {
+  background-color: #ffc107;
+}
+
+.seat.booked {
+  background-color: #333;
+  pointer-events: none;
+}
+
+.legend-seat {
+  pointer-events: none;
+  cursor: default;
+  border: none !important;
+}
+
+/* -------------------- */
+@media (max-width: 1024px) {
+  .seats-page__title {
+    padding-top: 4rem;
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .selected-panel {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .seats-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .seats-rows {
+    grid-template-rows: repeat(6, 30px);
+    gap: 6px;
+  }
+
+  .row-number {
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .seats-page__seats-grid {
+    grid-template-columns: repeat(10, 30px);
+    gap: 6px;
+  }
+
+  .seat {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .screen-display {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .legend-item {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .seat {
+    width: 26px;
+    height: 26px;
+    font-size: 0.65rem;
+  }
+
+  .seats-page__seats-grid {
+    gap: 4px;
+  }
+
+  .seats-rows {
+    transform: translateY(-5px);
+    margin: 0 0.1rem;
+    gap: 1px;
+  }
+
+  .seats-layout {
+    gap: 2px;
+  }
+
+  .row-number {
+    font-size: 0.7rem;
+    width: 20px;
+  }
+
+  .seats-area {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .row-number:last-child {
+  margin-top: 16px
+}
+
+  .legend-seat {
+    width: 5px;
+    height: 18px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .legend-item {
+    gap: 0.25rem;
+    font-size: 0.5rem;
+  }
+
+  .selected-panel {
+    padding: 1rem;
+  }
+}

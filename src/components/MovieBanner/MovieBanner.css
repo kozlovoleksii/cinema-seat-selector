@@ -1,0 +1,167 @@
+.movie-banner {
+  background: url("/assets/main-banner.webp") 0 0 / cover no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 2rem;
+  text-align: center;
+
+  overflow: auto;
+}
+
+.movie-banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-banner__title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.movie-banner__description {
+  font-size: 1.4rem;
+  max-width: 600px;
+  margin-bottom: 80px;
+}
+
+.movie-banner__details {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  text-align: end;
+}
+
+.movie-banner__button {
+  max-width: 200px;
+  padding: 0.8rem 2rem;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.movie-banner__button:hover {
+  background-color: #e6b800;
+  transition: background-color 0.3s ease;
+}
+
+.movie-banner__button--fixed {
+  display: none;
+}
+
+.movie-banner__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* ------------------------ */
+@media (max-width: 1024px) {
+  .movie-banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-position: center center;
+  }
+
+  .movie-banner__content {
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .movie-banner__title {
+    font-size: 2.8rem;
+  }
+
+  .movie-banner__description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .movie-banner__info {
+    align-items: center;
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  .movie-banner__details,
+  .movie-banner__technology {
+    font-size: 1rem;
+  }
+
+  .movie-banner__button {
+    display: none;
+  }
+
+  .movie-banner__button--fixed {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 16px;
+    right: 16px;
+    padding: 1rem;
+    width: calc(100% - 32px);
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-banner {
+    background: url("/assets/dragon1.webp") center center/cover no-repeat;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .movie-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    z-index: -1;
+  }
+
+  .movie-banner__title {
+    font-size: 2rem;
+  }
+
+  .movie-banner__description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .movie-banner__button {
+    width: 100%;
+    max-width: none;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .movie-banner__details,
+  .movie-banner__technology {
+    font-size: 0.9rem;
+  }
+}
